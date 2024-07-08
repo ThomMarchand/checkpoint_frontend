@@ -25,9 +25,11 @@ export default function CountryDetails() {
           <p className="text-xs text-gray-700">
             Name: {country?.name} {country?.code && `(${country?.code})`})
           </p>
-          <p className="text-xs text-gray-700">
-            Continent: {country?.continent?.name}
-          </p>
+          {country?.continent && (
+            <p className="text-xs text-gray-700">
+              Continent: {country?.continent?.name}
+            </p>
+          )}
         </div>
       )}
     </>
